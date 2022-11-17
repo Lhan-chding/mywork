@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+    <head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>井字棋</title>
+		<link rel="stylesheet" href="styles/game.css" />
+   </head>
+   <body>
+	   <h1>Let play the game!</h1>
+	   <table><!--打出一个表格，然后使用css去消除掉边框从而达到打印出棋盘的效果-->
+		   <tr>
+		      <td class="cell" id="0"></td>
+			  <td class="cell" id="1"></td>
+			  <td class="cell" id="2"></td>
+		   </tr>
+		   <tr>
+		      <td class="cell" id="3"></td>
+			  <td class="cell" id="4"></td>
+			  <td class="cell" id="5"></td>
+		   </tr>
+	       <tr>
+		      <td class="cell" id="6"></td>
+			  <td class="cell" id="7"></td>
+			  <td class="cell" id="8"></td>
+		   </tr>
+	   </table>
+	   <div class="endgame">
+	       <div class="text"></div>   
+	   </div>
+	   <button class="btn" onclick="startGame()">Restart</button><!--使用一个函数当点击按钮的时候触发-->
+	   <script src="styles/game.js"></script>
+   </body>
+</html>
