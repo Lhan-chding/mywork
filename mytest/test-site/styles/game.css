@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;/*设置外边距为零*/
+	padding:0;/*让内边距也为零*/
+}
+button {
+	position:absolute;
+	left:46%;
+	margin-left:-65px;
+	top:450px;
+}
+td{
+	border:2px solid #333;
+	width:100px;
+	height:100px;
+	text-align:center;
+	vertical-align: middle;
+	font-family: "微软雅黑";
+	font-style: italic;/*使用斜体*/
+	font-size:70px;
+	cursor:pointer;/*设置光标显示为一只手*/
+}
+table{
+	position:fixed;
+	left:40%;
+	top:100px;
+	border-collapse:collapse;/*折叠合并边框*/
+}
+table tr:first-child td{/*对父元素的第一个子元素进行设置样式*/
+	border-top:0;/*让顶部边框不显示*/
+}
+table tr:last-child td{/*对父元素的最后一个子元素进行设置样式*/
+	border-bottom:0;/*让底部边框不显示*/
+}
+table tr td:first-child {
+	border-left:0;/*让左边边框不显示*/
+}
+table tr td:last-child {
+	border-right:0;
+}
+.endgame {
+	display:none;
+	width:200px;
+	height:120px;
+	background-color:aquamarine;
+	position:absolute;
+	left:40%;
+	top:180px;
+	margin-left:50px;
+	text-align:center;
+	border-radius:5px;
+	color:aliceblue;
+	font-size:2em;
+}
+.btn{/*设置按钮*/
+	background-color:skyblue;
+	background-image: linear-gradient(to right,skyblue,pink 65%);
+	border-radius: 5px;
+	margin:0px;
+	border:1px solid skyblue;
+	color:#222831;
+	cursor:pointer;
+	font-size: 0.8rem;
+	font-weight: bold;
+	letter-spacing: 0.1rem;
+	padding: 0.9rem 4rem;
+	text-transform: uppercase;/*让按钮里面的字母只有大写，无小写字母*/
+	transition: transform 80ms ease-in;
+}
+form>.btn{
+	margin-top: 1.5rem;
+}
+btn:hover{/*当鼠标放在按钮上的时候会让按钮变小*/
+	transform: scale(0.95);
+}
+h1{/*设置一个网站的名字*/
+	background-image: linear-gradient(to right,skyblue,pink 65%);
+	color:aquamarine;
+	font-size: 40px;
+	margin: 12px;
+	text-align: center;
+}
