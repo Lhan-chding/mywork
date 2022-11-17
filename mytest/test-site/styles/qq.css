@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+img{
+	position:absolute;
+	background-repeat: no-repeat;
+	left:450px;
+	top:100px;
+}
+h1{
+	background-image: linear-gradient(to right,skyblue,pink 65%);
+	color:aquamarine;
+	font-size: 40px;
+	margin: 12px;
+	text-align: center;
+}
+

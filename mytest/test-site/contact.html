@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/contact.css">
+</head>
+<body>
+    <header>
+	    <div class="top-img">
+		    <a href="logo-nav">
+			    <img src="images/1.jpeg" alt="logo">
+			</a>
+		</div>
+		<div class="nav-container">
+		     <ul class="ul-nav">
+			     <li class="li-nav">
+				    <a class="nav-link" href="introduction.html">Home</a>
+				 </li>
+				 <li class="li-nav">
+				     <a calss="nav-link" href="my intrests.html">intrests</a>
+				 </li>
+				 <li class="li-nav">
+				     <a class="nav-link" href="my life.html">My life</a>
+				 </li>
+				 <li class="li-nav">
+				     <a class="nav-link" href="contact.html">Contact</a>
+				 </li>
+			</ul>
+		</div>
+	</header>
+	 <div class="contact-photo con-p-1">
+
+    </div>
+
+    <!-- main区域 -->
+    <!-- 表单 -->
+    <div class="contact-main">
+        <!-- 介绍栏 纵向flex布局 -->
+        <div class="introduction flex1">
+            <h3 class="title-style">Contact Me</h3>
+                <p>Welcome to my website. <br>
+                    As I'm new user,if you have any suggestions or questions, please contact.</p>
+        </div>
+        <!-- contact区 横向flex布局 -->
+        <div class="contact-container flex">
+            <div class="contact-left">
+                <h3 class="title-style">Contact Details</h3>
+                <div class="Details flex1">
+                    <div class="De">
+                        <h6>Affiliated unit</h6>
+                        <p>电子科技大学 格拉斯哥学院</p>
+                    </div>
+                    <div class="De">
+                        <h6>Call Me</h6>
+                        <p><a href="">18780986576</a></p>
+                    </div>
+                    <div class="De">
+                        <h6>Email Me</h6>
+                        <p><a href="">1223128329@qq.com</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 表单区域 -->
+            <div class="contact-right">
+                <form action="host" method="get">
+                    <div class="contact-grid">
+                        <p>
+                            <input type="text" name="form-name" class="contact-input" id="form-name"
+                                placeholder="  Your Name*">
+                                <!-- 提示"your name" -->
+                        </p>
+                        <p>
+                            <input type="text" name="form-email" class="contact-input" id="form-email"
+                                placeholder="  Your Email*">
+                                <!-- 提示"your email" -->
+                        </p>
+                        <p>
+                            <input type="text" name="form-subject" class="contact-input" id="form-subject"
+                                placeholder="  Subject*">
+                        </p>
+                        <p>
+                            <input type="text" name="form-url" class="contact-input" id="form-url"
+                                placeholder="  Website URL*">
+                        </p>
+                        <!-- textarea区 -->
+                        <p id="textarea">
+                            <textarea name="form-text" class="contact-textarea" id="form-text" cols="30" rows="10"></textarea>
+                        </p>
+                        <p>
+                            <input type="submit" value="Send Message" name="form-submit" class="input-submit" id="form-submit">
+                        </p>
+                    </div>
+                </form>
+            </div>
+            <!-- 表单区域 -->
+        </div>
+    </div>
+	<div class="contact-photo con-p-2"></div>
+	 <footer class="b4">
+        <!-- 第一行采用 横向的flex布局 -->
+        <div class="header-footer flex">
+            <h1> Contact Me</h1>
+            <div class="link-footer">
+                <a href="weixin.html"><img src="images/index-微信.png" alt=""></a>
+                <a href="qq.html"><img src="images/index-QQ.png" alt=""></a>
+            </div>
+        </div>
+       
+        <!-- 横向flex布局  3个单元格 -->
+        <div class="main-footer flex">
+            <div class="phone container-footer">
+                <div>
+                    <h5>Phone</h5>
+                    <h5><a href="">18780986576</a></h5>
+                </div>
+
+                <div class="email">
+                    <h5>E-mail</h5>
+                    <h5> <a href="">1223128329@qq.com</a></h5>
+                </div>
+            </div>
+            <div class="address container-footer">
+                <h5>电子科技大学 <br>
+                    格拉斯哥学院, <br> 四川省 成都市.</h5>
+            </div>
+        </div>
+
+        <!-- 版权 -->
+        <div class="copy-footer">
+            <p>&copy;2022 my life. All rights reserved. Design by LiHan</p>
+        </div>
+    </footer>
+	</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN" >
+  <head>
+      <meta charset="utf-8">
+      <title>welcome!</title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--使网站的初始大小占屏幕面积的100%，让原始缩放比例为1.0-->
+	  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link href="styles/style.css" rel="stylesheet">
+  </head>
+  <body>
+	 <h1>Times</h1><!--网站名标题-->
+	<div class="container right-panel-active">
+		<div class="container_from  container_signup">
+			<form action="#" class="from" id="from1">
+				<h2 class="form_title">register your account</h2>
+				<input type="tel" placeholder="Telephone" class="input" pattern="^1[0-9]{10}$" id="tel"><!--表格第一行电话,并且规定了电话号码必须要符合正确的位数，不然会提示错误-->
+				<input type="text" placeholder="Username" class="input" id="regUN" /><!--使用iuput进行输入-->
+				<input type="password" placeholder="Password" class="input" id="regPW"/>
+				<button class="btn" onclick="reg()">Click on the register</button>
+				
+			</form>     
+		</div>
+		<div class="container_from
+					container_signin"><!--登陆框的设计-->
+			<form action="#" class="from" id="from2">
+				<h2 class="form_title">welcome to log in</h2>
+				<input type="text" placeholder="Username" class="input" id="logUN"/>
+				<input type="password" placeholder="Password" class="input" id="logPW" >
+				<div><!--小方块打勾的设置-->
+					<span>remember your password</span><input type="checkbox" name="rup" id="rup" />
+					<span>automatic login</span><input type="checkbox" name="autoLogin" />
+				</div>
+				<a href="#" class="link">forget about your password?</a>
+				<button class="btn" onclick="log()">Log in</button>
+			</form>
+		</div><!--想要控制注册页面和移动页面移动-->
+		<div class="container_overlay">
+			<div class="overlay" >
+				<div class="overlay_panel  overlay_left">
+					<button class="btn" id="signin">already have an account, just log in</button>
+				</div>
+				<div class="overlay_panel overlay_right">
+					<button class="btn" id="signup">Don't shave?click on the register</button>
+				</div><!--我想要设置按钮来使他移动-->
+			</div>
+		</div>
+	 </div> 
+	
+	 <script type="text/javascript">
+const signinBtn = document.getElementById("signin");
+const signupBtn = document.getElementById("signup");
+const container = document.querySelector(".container");/*用关键词来代表所选择的元素，方便下面进行操作书写*/
+
+signinBtn.addEventListener("click", () => {
+    container.classList.remove("right-panel-active")})/*清除掉’right-panel-active'的效果*/
+signupBtn.addEventListener("click", () => {
+    container.classList.add("right-panel-active")
+})/*click函数的简洁表达方式，达到点击按钮添加‘right-panel-active'自定义css的效果*/
+ function log() {
+            let logUN = document.getElementById('logUN').value;
+            let logPW = document.getElementById('logPW').value;
+            //判断用户是否输入数据
+            if(logUN === "" && logPW === "") {
+                alert("please input your account and password");
+            } else {
+                //判断用户名是否已经注册
+                if(logUN in localStorage) {
+                    //如果已经注册，获取用户密码
+                    let password = localStorage[logUN];
+                    //判断用户输入的密码和 注册的密码是否一致
+                    if(logPW === password) {
+                        alert("log in successfully!");
+                        document.getElementById('logUN').value = "";
+                        document.getElementById('logPW').value = "";
+						window.open('introduction.html');
+                    } else {
+                        alert("your input password is wrong!");
+                    }
+                } else {
+                    alert("We can't find this account,please regist first!");
+                }
+            }
+        }
+
+        //注册方法
+        function reg() {
+            let username = document.getElementById('regUN').value;
+            let password = document.getElementById('regPW').value;
+            if(username === "" && password === "") {
+                alert("Please input your account");
+            } else {
+                //判断用户名是否已经存在
+                if(username in localStorage){
+                    alert("Sorry!this account has already been taken,please choose another one.");
+                    document.getElementById('regUN').value = "";
+                    document.getElementById('regPW').value = "";
+                } else {
+                    //如果不存在，则将用户名和密码存到网页中
+                    localStorage.setItem(username,password);
+                    alert("Regist successfully！");
+                    //注册成功，隐藏注册页面，显示登录界面
+                    
+                }
+            } 
+        }  
+  </script>
+ </body>
+</html>
